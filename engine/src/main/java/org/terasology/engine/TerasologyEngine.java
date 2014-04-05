@@ -27,6 +27,7 @@ import org.terasology.asset.AssetManager;
 import org.terasology.asset.AssetType;
 import org.terasology.asset.AssetUri;
 import org.terasology.asset.sources.ClasspathSource;
+import org.terasology.cellularAutomatons.CellularAutomatonManager;
 import org.terasology.config.Config;
 import org.terasology.engine.bootstrap.ApplyModulesUtil;
 import org.terasology.engine.modes.GameState;
@@ -352,6 +353,9 @@ public class TerasologyEngine implements GameEngine {
         CoreRegistry.putPermanently(ComponentSystemManager.class, new ComponentSystemManager());
         CoreRegistry.putPermanently(NetworkSystem.class, new NetworkSystemImpl(time));
         CoreRegistry.putPermanently(Game.class, new Game(this, time));
+
+        CoreRegistry.putPermanently(CellularAutomatonManager.class, new CellularAutomatonManager());
+
 
         AssetType.registerAssetTypes(assetManager);
         ClasspathSource source = new ClasspathSource(TerasologyConstants.ENGINE_MODULE,

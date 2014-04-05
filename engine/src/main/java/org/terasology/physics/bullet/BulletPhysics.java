@@ -535,7 +535,7 @@ public class BulletPhysics implements PhysicsEngine {
      * ensures that impulses requested before the body is added to the engine
      * are applied after the body is added to the engine.
      */
-    // TODO: None of the above is true.
+    // TODO: None of the up is true.
     // TODO: This isn't necessary, create and remove bodies immediately
     private synchronized void processQueuedBodies() {
         while (!insertionQueue.isEmpty()) {
