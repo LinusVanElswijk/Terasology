@@ -1,0 +1,17 @@
+#ifndef DATA_CUBES_CLA
+#define DATA_CUBES_CLA
+
+int32 constant READ_DATA_BLOCK_SIZE     = {1};
+int32 constant READ_DATA_BLOCK_SIZE_SQR = {1} * {1};
+
+typedef uchar* BinaryDataCubeRef;
+
+void indexToXYZ(int index, int* x, int *y, int* z)
+{
+    *x = index / READ_DATA_BLOCK_SIZE_SQR;
+    index %= READ_DATA_BLOCK_SIZE_SQR;
+    *y = index / READ_DATA_BLOCK_SIZE;
+    *z = index % READ_DATA_BLOCK_SIZE;
+}
+
+#endif

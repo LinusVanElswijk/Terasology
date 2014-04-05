@@ -114,7 +114,7 @@ public abstract class UpdatesWithNeighboursFamilyFactory implements BlockFamilyF
 
         BlockUri blockUri = new BlockUri(blockDefUri.getModuleName(), blockDefUri.getAssetName());
 
-        // Now make sure we have all combinations based on the basic set (above) and rotations
+        // Now make sure we have all combinations based on the basic set (up) and rotations
         for (byte connections = 0; connections < 64; connections++) {
             // Only the allowed connections should be created
             if ((connections & connectionSides) == connections) {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 MovingBlocks
+ * Copyright 2014 MovingBlocks
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.terasology.cellularAutomatons.data;
 
 /**
- * This package contains metadata classes for the types important to the entity system - components and events.
- * These classes provide information up and beyond the basic class metadata, often driven from annotations.
+ * Created by Linus on 3/31/14.
  */
-package org.terasology.entitySystem.metadata;
+public interface RWDataCube<T> extends ReadableDataCube<T>, WritableDataCube<T> {
+}

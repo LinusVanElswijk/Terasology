@@ -362,7 +362,7 @@ public final class ChunkTessellator {
             }
 
             // Draw the top if below a non-lowered block
-            // TODO: Don't need to render the top if each side and the block above each side are either liquid or opaque solids.
+            // TODO: Don't need to render the top if each side and the block up each side are either liquid or opaque solids.
             Block blockToCheck = adjacentBlocks.get(Side.TOP);
             drawDir[Side.TOP.ordinal()] |= !blockToCheck.isLiquid();
 
