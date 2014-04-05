@@ -226,7 +226,7 @@ public class WorldProviderCoreImpl implements WorldProviderCore {
     @Override
     public Block getBlock(int x, int y, int z) {
         if (y >= ChunkConstants.SIZE_Y || y < 0) {
-            // Happens if you are moving around above the world
+            // Happens if you are moving around up the world
             return BlockManager.getAir();
         }
 

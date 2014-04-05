@@ -20,6 +20,9 @@ import org.terasology.world.chunks.ChunkConstants;
 
 import javax.vecmath.Vector3f;
 
+import static com.google.common.math.IntMath.divide;
+import static com.google.common.math.IntMath.mod;
+
 /**
  * Collection of math functions.
  *

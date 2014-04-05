@@ -91,7 +91,7 @@ public final class EntityData {
   }
 
   /**
-   * Protobuf enum {@code ChunkState}
+   * Protobuf enum {@code ChunkLoadState}
    */
   public enum ChunkState
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -196,7 +196,7 @@ public final class EntityData {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:ChunkState)
+    // @@protoc_insertion_point(enum_scope:ChunkLoadState)
   }
 
   public interface ValueOrBuilder extends
@@ -11932,13 +11932,13 @@ public final class EntityData {
      */
     int getZ();
 
-    // optional .ChunkState state = 5;
+    // optional .ChunkLoadState state = 5;
     /**
-     * <code>optional .ChunkState state = 5;</code>
+     * <code>optional .ChunkLoadState state = 5;</code>
      */
     boolean hasState();
     /**
-     * <code>optional .ChunkState state = 5;</code>
+     * <code>optional .ChunkLoadState state = 5;</code>
      */
     org.terasology.protobuf.EntityData.ChunkState getState();
 
@@ -12250,17 +12250,17 @@ public final class EntityData {
       return z_;
     }
 
-    // optional .ChunkState state = 5;
+    // optional .ChunkLoadState state = 5;
     public static final int STATE_FIELD_NUMBER = 5;
     private org.terasology.protobuf.EntityData.ChunkState state_;
     /**
-     * <code>optional .ChunkState state = 5;</code>
+     * <code>optional .ChunkLoadState state = 5;</code>
      */
     public boolean hasState() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional .ChunkState state = 5;</code>
+     * <code>optional .ChunkLoadState state = 5;</code>
      */
     public org.terasology.protobuf.EntityData.ChunkState getState() {
       return state_;
@@ -13052,22 +13052,22 @@ public final class EntityData {
         return this;
       }
 
-      // optional .ChunkState state = 5;
+      // optional .ChunkLoadState state = 5;
       private org.terasology.protobuf.EntityData.ChunkState state_ = org.terasology.protobuf.EntityData.ChunkState.ADJACENCY_GENERATION_PENDING;
       /**
-       * <code>optional .ChunkState state = 5;</code>
+       * <code>optional .ChunkLoadState state = 5;</code>
        */
       public boolean hasState() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional .ChunkState state = 5;</code>
+       * <code>optional .ChunkLoadState state = 5;</code>
        */
       public org.terasology.protobuf.EntityData.ChunkState getState() {
         return state_;
       }
       /**
-       * <code>optional .ChunkState state = 5;</code>
+       * <code>optional .ChunkLoadState state = 5;</code>
        */
       public Builder setState(org.terasology.protobuf.EntityData.ChunkState value) {
         if (value == null) {
@@ -13079,7 +13079,7 @@ public final class EntityData {
         return this;
       }
       /**
-       * <code>optional .ChunkState state = 5;</code>
+       * <code>optional .ChunkLoadState state = 5;</code>
        */
       public Builder clearState() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -16720,7 +16720,7 @@ public final class EntityData {
       "\014hasCharacter\030\022 \001(\010*\t\010\210\'\020\200\200\200\200\002\"\200\002\n\nChunk" +
       "Store\022\033\n\005store\030\001 \001(\0132\014.EntityStore\022\t\n\001x\030" +
       "\002 \001(\021\022\t\n\001y\030\003 \001(\021\022\t\n\001z\030\004 \001(\021\022\032\n\005state\030\005 \001" +
-      "(\0162\013.ChunkState\022\036\n\nblock_data\030\006 \001(\0132\n.Te" +
+      "(\0162\013.ChunkLoadState\022\036\n\nblock_data\030\006 \001(\0132\n.Te" +
       "raArray\022%\n\021deprecated_data_1\030\007 \001(\0132\n.Ter" +
       "aArray\022%\n\021deprecated_data_2\030\010 \001(\0132\n.Tera" +
       "Array\022\037\n\013liquid_data\030\t \001(\0132\n.TeraArray*\t",
@@ -16734,7 +16734,7 @@ public final class EntityData {
       " \003(\005B\002\020\001\022\023\n\013prefab_name\030\022 \003(\t\022/\n\021storeRe" +
       "ferenceSet\030\023 \003(\0132\024.EntityStoreMetadata*\t" +
       "\010\210\'\020\200\200\200\200\002*4\n\tStoreType\022\023\n\017PlayerStoreTyp",
-      "e\020\001\022\022\n\016ChunkStoreType\020\002*\207\001\n\nChunkState\022 " +
+      "e\020\001\022\022\n\016ChunkStoreType\020\002*\207\001\n\nChunkLoadState\022 " +
       "\n\034ADJACENCY_GENERATION_PENDING\020\000\022%\n!INTE" +
       "RNAL_LIGHT_GENERATION_PENDING\020\001\022\020\n\014DEPRE" +
       "CATED_1\020\002\022\020\n\014DEPRECATED_2\020\003\022\014\n\010COMPLETE\020" +

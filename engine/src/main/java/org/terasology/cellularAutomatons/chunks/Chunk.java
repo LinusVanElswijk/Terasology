@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 MovingBlocks
+ * Copyright 2014 MovingBlocks
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.terasology.cellularAutomatons.chunks;
+
+import org.terasology.math.Vector3i;
 
 /**
- * This package contains metadata classes for the types important to the entity system - components and events.
- * These classes provide information up and beyond the basic class metadata, often driven from annotations.
+ * Created by Linus on 4/1/14.
  */
-package org.terasology.entitySystem.metadata;
+public interface Chunk {
+
+    public ChunkLoadState getLoadState();
+
+    public boolean isDirty();
+
+    public void setChanged();
+
+    public void markAsDirty();
+
+    public Chunk up();
+
+    public Chunk down();
+
+    public Chunk north();
+
+    public Chunk west();
+
+    public Chunk south();
+
+    public Chunk east();
+}
